@@ -26,7 +26,7 @@ router.get("/product",async(req,res)=>{
     
     try{
         
-        const data = await ProductModel.find();
+        const data = await ProductModel.find().sort({_id:-1});
         res.json(data);
     }
     catch(e){
